@@ -13,9 +13,12 @@ import {
     UserCog,
     UserCheck,
   } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import Login from './Login';
 
 function Landing()
 {
+
     return(
         <>
          <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
@@ -27,9 +30,22 @@ function Landing()
                               <Shield className="h-8 w-8 text-blue-600" />
                               <span className="text-xl font-bold text-gray-900">STRIVERS</span>
                             </div>
-                            <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
-                              Login
+                           <div>
+                           <button className="bg-blue-600 mr-4 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                            <Link
+                    to={"/SignUp"}
+                  >
+                    Sign Up
+                  </Link>
                             </button>
+                            <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                            <Link
+                    to={"/login"}
+                  >
+                    Login
+                  </Link>
+                            </button>
+                           </div>
                           </div>
                         </nav>
                       </header>
